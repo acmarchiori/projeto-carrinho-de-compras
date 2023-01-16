@@ -1,5 +1,8 @@
 import { searchCep } from './helpers/cepFunctions';
+import { fetchProductsList } from './helpers/fetchFunctions';
 import './style.css';
 
 document.querySelector('.cep-button').addEventListener('click', searchCep);
-console.log('xablau');
+
+const teste = await fetchProductsList('computador');
+console.log(teste);
