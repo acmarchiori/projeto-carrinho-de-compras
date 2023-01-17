@@ -22,7 +22,6 @@ const createError = () => {
   products.appendChild(paragraph);
 };
 
-
 const getProducts = async () => {
   try {
     createLoading();
@@ -46,7 +45,6 @@ const addcart = async () => {
     const id = getId[i].innerText;
     saveCartID(id);
     fetchProduct(id);
-    // console.log(cart);
   }));
 };
 
