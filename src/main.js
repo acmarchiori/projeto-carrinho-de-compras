@@ -1,6 +1,6 @@
 import { searchCep } from './helpers/cepFunctions';
 import { fetchProductsList, fetchProduct } from './helpers/fetchFunctions';
-import { createProductElement } from './helpers/shopFunctions';
+import { createProductElement, createCartProductElement } from './helpers/shopFunctions';
 import { saveCartID } from './helpers/cartFunctions';
 import './style.css';
 
@@ -44,12 +44,25 @@ const addcart = async () => {
   getbtn.forEach((e, i) => e.addEventListener('click', async () => {
     const id = getId[i].innerText;
     saveCartID(id);
-    fetchProduct(id);
     const dados = await fetchProduct(id);
-    const cart = createProductElement(dados);
+    const cart = createCartProductElement(dados);
     const add = document.querySelector('.cart__products');
     add.appendChild(cart);
   }));
 };
 
 addcart();
+
+const getCartSaved = () => {
+  const cart = JSON.parse(localStorage.getItem('cartProducts')) || [];
+  cart?.forEach(async (e) => {
+    const dados = await fetchProduct(e);
+    const cartReload = createCartProductElement(dados);
+    const add = document.querySelector('.cart__products');
+    add.appendChild(cartReload);
+  });
+};
+
+window.onload = () => {
+  getCartSaved();
+};
