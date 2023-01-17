@@ -41,10 +41,14 @@ const addcart = async () => {
   await getProducts();
   const getbtn = document.querySelectorAll('.product__add');
   const getId = document.querySelectorAll('.product__id');
-  getbtn.forEach((e, i) => e.addEventListener('click', () => {
+  getbtn.forEach((e, i) => e.addEventListener('click', async () => {
     const id = getId[i].innerText;
     saveCartID(id);
     fetchProduct(id);
+    const dados = await fetchProduct(id);
+    const cart = createProductElement(dados);
+    const add = document.querySelector('.cart__products');
+    add.appendChild(cart);
   }));
 };
 
