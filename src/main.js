@@ -58,6 +58,7 @@ const getCartSaved = () => {
   cart?.forEach(async (e) => {
     const dados = await fetchProduct(e);
     const cartReload = createCartProductElement(dados);
+    // console.log(dados);
     const add = document.querySelector('.cart__products');
     add.appendChild(cartReload);
   });
