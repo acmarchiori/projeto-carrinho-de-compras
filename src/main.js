@@ -9,14 +9,14 @@ const products = document.querySelector('.products');
 const createLoading = () => {
   const paragraph = document.createElement('p');
   paragraph.className = 'loading';
-  paragraph.innerText = 'Algum erro ocorreu, recarregue a página e tente novamente';
+  paragraph.innerText = 'carregando...';
   products.appendChild(paragraph);
 };
 
 const createError = () => {
   const paragraph = document.createElement('p');
   paragraph.className = 'error';
-  paragraph.innerText = 'carregando...';
+  paragraph.innerText = 'Algum erro ocorreu, recarregue a página e tente novamente';
   products.appendChild(paragraph);
 };
 
