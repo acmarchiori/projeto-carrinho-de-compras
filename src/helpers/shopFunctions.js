@@ -1,4 +1,5 @@
 import { removeCartID } from './cartFunctions';
+import { fetchProduct } from './fetchFunctions';
 
 // Esses comentários que estão antes de cada uma das funções são chamados de JSdoc,
 // experimente passar o mouse sobre o nome das funções e verá que elas possuem descrições!
@@ -45,9 +46,26 @@ export const getIdFromProduct = (product) => (
  * @param {Element} li - Elemento do produto a ser removido do carrinho.
  * @param {string} id - ID do produto a ser removido do carrinho.
  */
+
+export const subTotal = () => {
+  let sum = 0;
+  const cart = JSON.parse(localStorage.getItem('cartProducts')) || [];
+  const total = document.querySelector('.total-price');
+  if (cart.length === 0) {
+    total.innerHTML = 0;
+  } else {
+    cart?.forEach(async (e) => {
+      const dados = await fetchProduct(e);
+      sum += dados.price;
+      total.innerHTML = sum.toFixed(2);
+    });
+  }
+};
+
 const removeCartProduct = (li, id) => {
   li.remove();
   removeCartID(id);
+  subTotal();
 };
 
 /**
