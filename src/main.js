@@ -38,19 +38,6 @@ const getProducts = async () => {
   }
 };
 
-// const subTotal = () => {
-//   const cart = JSON.parse(localStorage.getItem('cartProducts')) || [];
-//   let sum = 0;
-//   const total = document.querySelector('.total-price');
-//   cart?.forEach(async (e) => {
-//     const dados = await fetchProduct(e);
-//     sum += dados.base_price;
-//     console.log(sum);
-//     total.innerHTML = sum.toFixed(2);
-//   });
-// };
-
-// let sum = 0;
 const addcart = async () => {
   await getProducts();
   const getbtn = document.querySelectorAll('.product__add');
@@ -77,37 +64,6 @@ const getCartSaved = () => {
     add.appendChild(cartReload);
   });
 };
-
-// const removePrice = async (id) => {
-//   const getTotal = JSON.parse(localStorage.getItem('total')) || 0;
-//   const product = await fetchProduct(id);
-//   const subtracao = getTotal - product.base_price;
-//   const total = document.querySelector('.total-price');
-//   total.innerHTML = subtracao;
-// };
-
-// let sum = 0;
-// const subTotal = async () => {
-//   const cart = JSON.parse(localStorage.getItem('cartProducts')) || [];
-//   cart?.forEach(async (e) => {
-//     const dados = await fetchProduct(e);
-//     const total = document.querySelector('.total-price');
-//     sum = parseFloat(total.innerHTML) + dados.base_price;
-//     console.log(sum);
-//     // console.log(typeof total);
-//     // totalPrice.push(dados.base_price);
-//     // totalPrice.forEach((element) => {
-//     //   sum += element;
-//     // });
-//     // console.log(totalPrice);
-//     // total.innerHTML = parseFloat(sum).toFixed(2);
-//     total.innerHTML = sum.toFixed(2);
-//   });
-//   // const test2 = test.reduce((acc, curr) => {
-//   //   acc += curr;
-//   //   return acc;
-//   // }, 0);
-// };
 
 window.onload = () => {
   getCartSaved();
