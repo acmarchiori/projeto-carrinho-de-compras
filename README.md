@@ -57,3 +57,5 @@ Os seguintes arquivos e pastas foram desenvolvidos pela Trybe:
 - API dos Correios para CEP: [https://cep.awesomeapi.com.br/json/](https://cep.awesomeapi.com.br/json/) e [https://brasilapi.com.br/api/cep/v2/](https://brasilapi.com.br/api/cep/v2/)
 
 Espero que aproveite sua experiência com nosso Carrinho de Compras Dinâmico! Em caso de dúvidas ou sugestões, sinta-se à vontade para entrar em contato conosco. Boas compras! 🛍️
+
+**Link para o projeto publicado: [Projeto Carrinho de Compras](https://projeto-carrinho-de-compras.surge.sh)**

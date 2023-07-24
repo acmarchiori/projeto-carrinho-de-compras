@@ -2,7 +2,11 @@
   "name": "sd-0x-project-shopping-cart",
   "version": "1.0.0",
   "main": "script.js",
+  "homepage": "https://acmarchiori.github.io/projeto-carrinho-de-compras",
   "scripts": {
+    "build": "vite build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "vite",
     "dev": "vite --open",
     "test": "jest --watchAll",
@@ -50,6 +54,7 @@
     "stylelint-config-standard": "28.0.0"
   },
   "dependencies": {
+    "gh-pages": "^5.0.0",
     "vite": "^3.1.8"
   }
 }
