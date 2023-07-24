@@ -2,8 +2,6 @@
 
 Seja bem-vindo(a) ao projeto de Carrinho de Compras Dinâmico! Neste projeto, você desenvolverá um carrinho de compras totalmente dinâmico, capaz de consumir dados diretamente da API do Mercado Livre, buscando produtos disponíveis para venda.
 
-![Estrelas](url-da-imagem-das-estrelas) <!-- Substitua "url-da-imagem-das-estrelas" pela URL da imagem de estrelas ou algum outro ícone adequado. -->
-
 ## Descrição do Projeto
 
 Imagine um carrinho de compras moderno e eficiente, onde você pode adicionar e remover itens conforme desejar, visualizar detalhes dos produtos e acompanhar o total de sua compra de forma interativa. Esse é o objetivo do nosso projeto de Carrinho de Compras Dinâmico!
