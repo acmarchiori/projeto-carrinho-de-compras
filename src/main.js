@@ -38,12 +38,12 @@ const getProducts = async () => {
   }
 };
 
-const addcart = async () => {
+const addCart = async () => {
   await getProducts();
-  const getbtn = document.querySelectorAll('.product__add');
+  const getBtn = document.querySelectorAll('.product__add');
   const getId = document.querySelectorAll('.product__id');
   const add = document.querySelector('.cart__products');
-  getbtn.forEach((e, i) => e.addEventListener('click', async () => {
+  getBtn.forEach((e, i) => e.addEventListener('click', async () => {
     const id = getId[i].innerText;
     saveCartID(id);
     const dados = await fetchProduct(id);
@@ -53,7 +53,7 @@ const addcart = async () => {
   }));
 };
 
-addcart();
+addCart();
 
 const getCartSaved = () => {
   const cart = JSON.parse(localStorage.getItem('cartProducts')) || [];

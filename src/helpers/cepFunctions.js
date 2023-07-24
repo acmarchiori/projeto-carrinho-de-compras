@@ -14,8 +14,8 @@ export const getAddress = async (CEP) => {
 export const searchCep = async () => {
   const cartAddress = document.querySelector('.cart__address');
   try {
-    const imput = document.querySelector('.cep-input');
-    const address = await getAddress(imput.value);
+    const input = document.querySelector('.cep-input');
+    const address = await getAddress(input.value);
     cartAddress.innerHTML = `${address.street || address.address} - ${address.neighborhood
       || address.district} - ${address.city} - ${address.state}`;
   } catch (error) {
