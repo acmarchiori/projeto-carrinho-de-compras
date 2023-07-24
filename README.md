@@ -15,7 +15,6 @@ Neste projeto, utilizamos as seguintes tecnologias:
 - JavaScript: Linguagem de programação para o desenvolvimento da lógica do projeto.
 - HTML5 e CSS3: Utilizados para a estruturação e estilização da interface do carrinho de compras.
 - Jest: Framework de testes utilizado para criar e executar testes automatizados.
-- Cypress: Ferramenta de testes end-to-end que permite testar a aplicação como um usuário real.
 
 ## Como Executar o Projeto
 
