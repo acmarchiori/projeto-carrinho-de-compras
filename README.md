@@ -1,6 +1,6 @@
 # Meu Projeto de Carrinho de Compras Dinâmico 🛒
 
-Olá! Eu sou o desenvolvedor deste projeto de Carrinho de Compras Dinâmico. Neste trabalho, desenvolvi um carrinho de compras totalmente dinâmico, capaz de consumir dados diretamente da API do Mercado Livre para buscar produtos disponíveis para venda.
+Bem-vindo(a) ao projeto de Carrinho de Compras Dinâmico. Neste trabalho, desenvolvi um carrinho de compras totalmente dinâmico, capaz de consumir dados diretamente da API do Mercado Livre para buscar produtos disponíveis para venda.
 
 ## Descrição do Projeto
 
